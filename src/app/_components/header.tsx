@@ -110,6 +110,7 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : "_self"}
                 className="text-sm/6 font-semibold text-gray-900"
               >
                 {link.name}
@@ -159,6 +160,11 @@ export default function Header() {
                               key={subLink.name}
                               as="a"
                               href={subLink.href}
+                              target={
+                                subLink.href.startsWith("http")
+                                  ? "_blank"
+                                  : "_self"
+                              }
                               className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
                             >
                               {subLink.name}
@@ -173,6 +179,7 @@ export default function Header() {
                     <a
                       key={link.name}
                       href={link.href}
+                      target={link.href.startsWith("http") ? "_blank" : "_self"}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       {link.name}
