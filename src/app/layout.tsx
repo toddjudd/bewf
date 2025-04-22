@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
-import { TRPCReactProvider } from "@/trpc/react";
+// import { TRPCReactProvider } from "@/trpc/react";
 import Header from "./_components/header";
 import Footer from "./_components/footer";
 import Banner from "./_components/banner";
@@ -25,12 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <body>
-        <TRPCReactProvider>
-          <Header />
-          <Banner />
-          {children}
-          <Footer />
-        </TRPCReactProvider>
+        {/* <TRPCReactProvider> */}
+        <Header />
+        <Banner />
+        {children}
+        <Footer />
+        {/* </TRPCReactProvider> */}
       </body>
     </html>
   );
